@@ -1,4 +1,8 @@
-# Notes on grep
+---
+title: Notes on `grep`
+author: B.S.Bharath Saiguhan
+date: \today
+---
 
 ## Basic Regular Expressions (BREs)
 
