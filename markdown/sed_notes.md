@@ -1,4 +1,9 @@
-# Notes on sed
+---
+title: Notes on `sed`
+author: B.S. Bharath Saiguhan
+date: \today
+---
+
 
 ## Substitutions
 
@@ -8,7 +13,7 @@ Done with the `s` command, which requires:
 - replacement string
 - file on which to act & other optional flags
 
-like so: `sed 's/<regex>/<replacement>/<clause> /path/to/file`. 
+like so: `sed 's/<regex>/<replacement>/<clause> /path/to/file`.
 
 Although `/` is the standard delimiter, any printable character may be used for convenience, say if you are going to work with file pathnames as an example. If replacement is empty, then sed simply 'deletes' the patterns matching the regex.
 
@@ -20,7 +25,7 @@ Some of the most commonly used flags are:
 
 sed also understands backreferences. Use `&` to substitute the entire matched pattern at that point, which means that `'s/Atlanta/&, the capital of the South/'` replaces all occurences of "Atlanta" with "Atlanta, the capital...".
 
-The `g` clause given to sed at the end of an editing command (i.e. after the third delimiter) replaces all pattern matches _globally_. Similarly, the `n` clause, where n is a number, replaces the n-th occurence only. 
+The `g` clause given to sed at the end of an editing command (i.e. after the third delimiter) replaces all pattern matches _globally_. Similarly, the `n` clause, where n is a number, replaces the n-th occurence only.
 
 sed remembers the regexs given to it, and if you don't give it a regex in the editing command, it will repeat the last regex.
 
